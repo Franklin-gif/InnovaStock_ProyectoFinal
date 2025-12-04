@@ -26,5 +26,10 @@ namespace Proyecto.InnovaStock
         {
 
         }
+
+        private void grpInventario_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
