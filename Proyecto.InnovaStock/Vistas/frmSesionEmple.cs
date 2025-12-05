@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.InnovaStock.Vistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,14 @@ namespace Proyecto.InnovaStock
         private void frmSesionEmple_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pEDIDOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPedidosEmple PedidosEmple = new frmPedidosEmple();
+            PedidosEmple.MdiParent = this;
+            PedidosEmple.WindowState = FormWindowState.Maximized;
+            PedidosEmple.Show();
         }
     }
 }
