@@ -46,26 +46,28 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
             grpAñadirProve.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // grpAñadirProve
             // 
+            grpAñadirProve.Anchor = AnchorStyles.None;
             grpAñadirProve.BackgroundImage = Properties.Resources.fondo;
             grpAñadirProve.Controls.Add(radioButton3);
             grpAñadirProve.Controls.Add(radioButton2);
             grpAñadirProve.Controls.Add(radioButton1);
             grpAñadirProve.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpAñadirProve.ForeColor = Color.White;
-            grpAñadirProve.Location = new Point(45, 53);
+            grpAñadirProve.Location = new Point(19, 58);
             grpAñadirProve.Name = "grpAñadirProve";
-            grpAñadirProve.Size = new Size(297, 512);
+            grpAñadirProve.Size = new Size(257, 498);
             grpAñadirProve.TabIndex = 0;
             grpAñadirProve.TabStop = false;
             grpAñadirProve.Text = "Añadir";
+            grpAñadirProve.Enter += grpAñadirProve_Enter;
             // 
             // radioButton3
             // 
@@ -108,6 +110,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.None;
             groupBox1.BackgroundImage = Properties.Resources.fondo;
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(comboBox1);
@@ -124,9 +127,9 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(373, 91);
+            groupBox1.Location = new Point(320, 90);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(645, 435);
+            groupBox1.Size = new Size(721, 435);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Añadir";
@@ -248,31 +251,37 @@
             label1.Text = "Nombre";
             label1.Click += label1_Click;
             // 
-            // pictureBox1
+            // tableLayoutPanel1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.fondo;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1066, 615);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            tableLayoutPanel1.BackColor = Color.Transparent;
+            tableLayoutPanel1.BackgroundImage = Properties.Resources.fondo;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 770F));
+            tableLayoutPanel1.Controls.Add(grpAñadirProve, 0, 0);
+            tableLayoutPanel1.Controls.Add(groupBox1, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(1066, 615);
+            tableLayoutPanel1.TabIndex = 2;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // frmProovedoresAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1066, 615);
-            Controls.Add(groupBox1);
-            Controls.Add(grpAñadirProve);
-            Controls.Add(pictureBox1);
+            Controls.Add(tableLayoutPanel1);
             Name = "frmProovedoresAdmin";
             Text = "frmProovedoresAdmin";
             grpAñadirProve.ResumeLayout(false);
             grpAñadirProve.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -296,6 +305,6 @@
         private TextBox textBox1;
         private Button button1;
         private ComboBox comboBox1;
-        private PictureBox pictureBox1;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }

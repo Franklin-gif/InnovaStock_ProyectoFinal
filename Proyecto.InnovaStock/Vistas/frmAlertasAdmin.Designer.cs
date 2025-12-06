@@ -31,24 +31,31 @@
             groupBox1 = new GroupBox();
             dataGridView1 = new DataGridView();
             button1 = new Button();
-            textBox1 = new TextBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.None;
+            groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(dataGridView1);
             groupBox1.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(78, 47);
+            groupBox1.ForeColor = SystemColors.ControlLightLight;
+            groupBox1.Location = new Point(87, 25);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(891, 350);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "ALERTAS";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(17, 25);
             dataGridView1.Name = "dataGridView1";
@@ -58,37 +65,45 @@
             // 
             // button1
             // 
-            button1.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(492, 469);
+            button1.Anchor = AnchorStyles.None;
+            button1.BackColor = Color.DimGray;
+            button1.Font = new Font("Segoe UI", 12F);
+            button1.ForeColor = Color.Cornsilk;
+            button1.Location = new Point(471, 489);
             button1.Name = "button1";
             button1.Size = new Size(124, 37);
             button1.TabIndex = 1;
             button1.Text = "Actualizar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // tableLayoutPanel1
             // 
-            textBox1.Location = new Point(68, 428);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(124, 122);
-            textBox1.TabIndex = 2;
-            textBox1.Text = "NOTA: En la BD Colocar correo de admin para que todas las alertas y inventario de stock bajo se manden al correo";
+            tableLayoutPanel1.BackgroundImage = Properties.Resources.fondo;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(button1, 0, 1);
+            tableLayoutPanel1.Controls.Add(groupBox1, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 65.04065F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 34.95935F));
+            tableLayoutPanel1.Size = new Size(1066, 615);
+            tableLayoutPanel1.TabIndex = 2;
             // 
             // frmAlertasAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1066, 615);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
-            Controls.Add(groupBox1);
+            Controls.Add(tableLayoutPanel1);
             Name = "frmAlertasAdmin";
             Text = "frmAlertasAdmin";
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -96,6 +111,6 @@
         private GroupBox groupBox1;
         private DataGridView dataGridView1;
         private Button button1;
-        private TextBox textBox1;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }

@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSesionEmple));
             menuStrip1 = new MenuStrip();
             iNICIOToolStripMenuItem = new ToolStripMenuItem();
             pEDIDOSToolStripMenuItem = new ToolStripMenuItem();
             sEToolStripMenuItem = new ToolStripMenuItem();
-            pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -69,20 +66,9 @@
             sEToolStripMenuItem.Size = new Size(78, 25);
             sEToolStripMenuItem.Text = "SESION";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(846, 464);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(274, 141);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
-            pictureBox2.Dock = DockStyle.Fill;
+            pictureBox2.Dock = DockStyle.Bottom;
             pictureBox2.Image = Properties.Resources.fondo;
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
@@ -95,7 +81,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1050, 576);
-            Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             Controls.Add(pictureBox2);
             IsMdiContainer = true;
@@ -105,7 +90,6 @@
             Load += frmSesionEmple_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -115,7 +99,6 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem iNICIOToolStripMenuItem;
-        private PictureBox pictureBox1;
         private ToolStripMenuItem pEDIDOSToolStripMenuItem;
         private ToolStripMenuItem sEToolStripMenuItem;
         private PictureBox pictureBox2;

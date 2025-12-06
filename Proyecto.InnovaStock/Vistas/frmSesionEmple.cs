@@ -20,7 +20,7 @@ namespace Proyecto.InnovaStock
 
         private void frmSesionEmple_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void pEDIDOSToolStripMenuItem_Click(object sender, EventArgs e)

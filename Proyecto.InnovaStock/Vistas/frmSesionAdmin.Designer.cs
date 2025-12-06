@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSesionAdmin));
             mnsBarra = new MenuStrip();
             iNICIOToolStripMenuItem = new ToolStripMenuItem();
             iNVENTARIOToolStripMenuItem = new ToolStripMenuItem();
@@ -37,10 +36,7 @@
             agregarEmpleadoToolStripMenuItem = new ToolStripMenuItem();
             aLERTASToolStripMenuItem = new ToolStripMenuItem();
             sESIONToolStripMenuItem = new ToolStripMenuItem();
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
             mnsBarra.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // mnsBarra
@@ -102,42 +98,20 @@
             sESIONToolStripMenuItem.Text = "SESION";
             sESIONToolStripMenuItem.Click += sESIONToolStripMenuItem_Click;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(818, 469);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(274, 141);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(854, 65);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 4;
-            label1.Text = "label1";
-            // 
             // frmSesionAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.IndianRed;
             ClientSize = new Size(1066, 615);
-            Controls.Add(label1);
             Controls.Add(mnsBarra);
-            Controls.Add(pictureBox1);
             IsMdiContainer = true;
             MainMenuStrip = mnsBarra;
             Name = "frmSesionAdmin";
             Text = "frmSesionAdmin";
+            Load += frmSesionAdmin_Load;
             mnsBarra.ResumeLayout(false);
             mnsBarra.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,11 +122,9 @@
         private ToolStripMenuItem iNICIOToolStripMenuItem;
         private ToolStripMenuItem iNVENTARIOToolStripMenuItem;
         private ToolStripMenuItem agregarEmpleadoToolStripMenuItem;
-        private PictureBox pictureBox1;
         private ToolStripMenuItem pROVEEDORESToolStripMenuItem;
         private ToolStripMenuItem pEDIDOSToolStripMenuItem;
         private ToolStripMenuItem sESIONToolStripMenuItem;
         private ToolStripMenuItem aLERTASToolStripMenuItem;
-        private Label label1;
     }
 }

@@ -21,5 +21,10 @@ namespace Proyecto.InnovaStock
         {
 
         }
+
+        private void frmPedidosAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,24 +39,25 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
             grpInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             grpPedidoInv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudCant).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // grpInventario
             // 
+            grpInventario.Anchor = AnchorStyles.None;
             grpInventario.BackColor = Color.Silver;
             grpInventario.BackgroundImage = Properties.Resources.fondo;
             grpInventario.Controls.Add(dataGridView1);
             grpInventario.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpInventario.ForeColor = Color.White;
-            grpInventario.Location = new Point(203, 65);
+            grpInventario.Location = new Point(196, 3);
             grpInventario.Name = "grpInventario";
-            grpInventario.Size = new Size(652, 233);
+            grpInventario.Size = new Size(673, 236);
             grpInventario.TabIndex = 0;
             grpInventario.TabStop = false;
             grpInventario.Text = "Inventario";
@@ -64,21 +65,23 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.GridColor = Color.Silver;
-            dataGridView1.Location = new Point(18, 25);
+            dataGridView1.Location = new Point(13, 22);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(613, 194);
+            dataGridView1.Size = new Size(654, 210);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btmActu
             // 
+            btmActu.Anchor = AnchorStyles.None;
             btmActu.BackColor = Color.DimGray;
             btmActu.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btmActu.ForeColor = Color.White;
-            btmActu.Location = new Point(460, 304);
+            btmActu.Location = new Point(463, 271);
             btmActu.Name = "btmActu";
             btmActu.Size = new Size(140, 44);
             btmActu.TabIndex = 1;
@@ -88,6 +91,7 @@
             // 
             // grpPedidoInv
             // 
+            grpPedidoInv.Anchor = AnchorStyles.None;
             grpPedidoInv.BackColor = Color.Silver;
             grpPedidoInv.BackgroundImage = Properties.Resources.fondo;
             grpPedidoInv.Controls.Add(button1);
@@ -99,7 +103,7 @@
             grpPedidoInv.Controls.Add(label1);
             grpPedidoInv.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpPedidoInv.ForeColor = Color.White;
-            grpPedidoInv.Location = new Point(231, 354);
+            grpPedidoInv.Location = new Point(243, 380);
             grpPedidoInv.Name = "grpPedidoInv";
             grpPedidoInv.Size = new Size(579, 199);
             grpPedidoInv.TabIndex = 2;
@@ -173,25 +177,32 @@
             label1.TabIndex = 0;
             label1.Text = "Nombre";
             // 
-            // pictureBox1
+            // tableLayoutPanel1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.fondo;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1066, 615);
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
+            tableLayoutPanel1.BackColor = Color.Transparent;
+            tableLayoutPanel1.BackgroundImage = Properties.Resources.fondo;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(btmActu, 0, 1);
+            tableLayoutPanel1.Controls.Add(grpPedidoInv, 0, 2);
+            tableLayoutPanel1.Controls.Add(grpInventario, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 70.29178F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 29.7082233F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 270F));
+            tableLayoutPanel1.Size = new Size(1066, 615);
+            tableLayoutPanel1.TabIndex = 4;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // frmInventarioAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1066, 615);
-            Controls.Add(grpPedidoInv);
-            Controls.Add(btmActu);
-            Controls.Add(grpInventario);
-            Controls.Add(pictureBox1);
+            Controls.Add(tableLayoutPanel1);
             Name = "frmInventarioAdmin";
             Text = "frmInventarioAdmin";
             grpInventario.ResumeLayout(false);
@@ -199,7 +210,7 @@
             grpPedidoInv.ResumeLayout(false);
             grpPedidoInv.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudCant).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -216,6 +227,6 @@
         private Button button1;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
-        private PictureBox pictureBox1;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }

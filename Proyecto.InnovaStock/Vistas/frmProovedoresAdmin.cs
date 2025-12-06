@@ -26,5 +26,15 @@ namespace Proyecto.InnovaStock
         {
 
         }
+
+        private void grpAñadirProve_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -40,13 +40,16 @@
             radioButton3 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
-            label4 = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
             groupBox2.SuspendLayout();
             grpAñadirProve.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox2
             // 
+            groupBox2.Anchor = AnchorStyles.None;
+            groupBox2.BackColor = Color.Transparent;
             groupBox2.Controls.Add(button1);
             groupBox2.Controls.Add(textBox4);
             groupBox2.Controls.Add(textBox2);
@@ -55,20 +58,20 @@
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(label1);
             groupBox2.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(372, 167);
+            groupBox2.Location = new Point(180, 327);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(645, 276);
+            groupBox2.Size = new Size(706, 268);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Añadir";
             // 
             // button1
             // 
-            button1.Location = new Point(275, 218);
+            button1.Location = new Point(295, 184);
             button1.Name = "button1";
             button1.Size = new Size(101, 28);
             button1.TabIndex = 12;
-            button1.Text = "button1";
+            button1.Text = "Ejecutar";
             button1.UseVisualStyleBackColor = true;
             // 
             // textBox4
@@ -122,13 +125,15 @@
             // 
             // grpAñadirProve
             // 
+            grpAñadirProve.Anchor = AnchorStyles.None;
+            grpAñadirProve.BackColor = Color.Transparent;
             grpAñadirProve.Controls.Add(radioButton3);
             grpAñadirProve.Controls.Add(radioButton2);
             grpAñadirProve.Controls.Add(radioButton1);
             grpAñadirProve.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            grpAñadirProve.Location = new Point(25, 41);
+            grpAñadirProve.Location = new Point(286, 42);
             grpAñadirProve.Name = "grpAñadirProve";
-            grpAñadirProve.Size = new Size(297, 512);
+            grpAñadirProve.Size = new Size(494, 222);
             grpAñadirProve.TabIndex = 3;
             grpAñadirProve.TabStop = false;
             grpAñadirProve.Text = "Añadir";
@@ -136,7 +141,7 @@
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(64, 417);
+            radioButton3.Location = new Point(272, 94);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(90, 25);
             radioButton3.TabIndex = 2;
@@ -147,7 +152,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(64, 251);
+            radioButton2.Location = new Point(163, 94);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(103, 25);
             radioButton2.TabIndex = 1;
@@ -166,31 +171,38 @@
             radioButton1.Text = "Añadir";
             radioButton1.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // tableLayoutPanel1
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(372, 89);
-            label4.Name = "label4";
-            label4.Size = new Size(645, 30);
-            label4.TabIndex = 4;
-            label4.Text = "NOTA: \r\nSi se quiere eliminar que salga un datagrip con todos los usuarios de empleados en la bd y que al dar 2blo click se elimine";
+            tableLayoutPanel1.BackgroundImage = Properties.Resources.fondo;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(grpAñadirProve, 0, 0);
+            tableLayoutPanel1.Controls.Add(groupBox2, 0, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(1066, 615);
+            tableLayoutPanel1.TabIndex = 4;
             // 
             // frmAgregarEmpleadoAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1066, 615);
-            Controls.Add(label4);
-            Controls.Add(grpAñadirProve);
-            Controls.Add(groupBox2);
+            Controls.Add(tableLayoutPanel1);
             Name = "frmAgregarEmpleadoAdmin";
             Text = "frmAgregarEmpleadoAdmin";
+            Load += frmAgregarEmpleadoAdmin_Load;
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             grpAñadirProve.ResumeLayout(false);
             grpAñadirProve.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -206,6 +218,6 @@
         private RadioButton radioButton3;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
-        private Label label4;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }
