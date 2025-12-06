@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             grpEmpleado = new GroupBox();
+            textBox3 = new TextBox();
+            label4 = new Label();
             button1 = new Button();
             textBox4 = new TextBox();
             textBox2 = new TextBox();
@@ -37,8 +39,6 @@
             label2 = new Label();
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
-            label4 = new Label();
-            textBox3 = new TextBox();
             grpEmpleado.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -58,12 +58,28 @@
             grpEmpleado.Controls.Add(label1);
             grpEmpleado.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpEmpleado.ForeColor = Color.White;
-            grpEmpleado.Location = new Point(180, 8);
+            grpEmpleado.Location = new Point(180, 162);
             grpEmpleado.Name = "grpEmpleado";
             grpEmpleado.Size = new Size(706, 291);
             grpEmpleado.TabIndex = 2;
             grpEmpleado.TabStop = false;
             grpEmpleado.Text = "Agregar Empleado (Lider)";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(25, 110);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(154, 26);
+            textBox3.TabIndex = 14;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(25, 86);
+            label4.Name = "label4";
+            label4.Size = new Size(61, 21);
+            label4.TabIndex = 13;
+            label4.Text = "Correo";
             // 
             // button1
             // 
@@ -135,27 +151,10 @@
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(1066, 615);
             tableLayoutPanel1.TabIndex = 4;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(25, 86);
-            label4.Name = "label4";
-            label4.Size = new Size(61, 21);
-            label4.TabIndex = 13;
-            label4.Text = "Correo";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(25, 110);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(154, 26);
-            textBox3.TabIndex = 14;
             // 
             // frmAgregarEmpleadoAdmin
             // 

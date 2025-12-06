@@ -45,9 +45,9 @@
             grpInventario.Controls.Add(dataGridView1);
             grpInventario.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpInventario.ForeColor = Color.White;
-            grpInventario.Location = new Point(162, 3);
+            grpInventario.Location = new Point(153, 28);
             grpInventario.Name = "grpInventario";
-            grpInventario.Size = new Size(741, 236);
+            grpInventario.Size = new Size(760, 376);
             grpInventario.TabIndex = 0;
             grpInventario.TabStop = false;
             grpInventario.Text = "Inventario";
@@ -59,9 +59,9 @@
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.GridColor = Color.Silver;
-            dataGridView1.Location = new Point(21, 20);
+            dataGridView1.Location = new Point(6, 25);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(700, 210);
+            dataGridView1.Size = new Size(748, 345);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -71,7 +71,7 @@
             btmActu.BackColor = Color.DimGray;
             btmActu.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btmActu.ForeColor = Color.White;
-            btmActu.Location = new Point(463, 271);
+            btmActu.Location = new Point(463, 501);
             btmActu.Name = "btmActu";
             btmActu.Size = new Size(140, 44);
             btmActu.TabIndex = 1;
@@ -90,10 +90,9 @@
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 70.29178F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 29.7082233F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 270F));
             tableLayoutPanel1.Size = new Size(1066, 615);
             tableLayoutPanel1.TabIndex = 4;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
