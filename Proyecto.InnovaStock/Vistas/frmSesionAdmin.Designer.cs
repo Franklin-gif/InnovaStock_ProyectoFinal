@@ -33,6 +33,7 @@
             iNVENTARIOToolStripMenuItem = new ToolStripMenuItem();
             pROVEEDORESToolStripMenuItem = new ToolStripMenuItem();
             pEDIDOSToolStripMenuItem = new ToolStripMenuItem();
+            aGREGARPEDIDOToolStripMenuItem = new ToolStripMenuItem();
             agregarEmpleadoToolStripMenuItem = new ToolStripMenuItem();
             aLERTASToolStripMenuItem = new ToolStripMenuItem();
             sESIONToolStripMenuItem = new ToolStripMenuItem();
@@ -42,7 +43,7 @@
             // mnsBarra
             // 
             mnsBarra.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mnsBarra.Items.AddRange(new ToolStripItem[] { iNICIOToolStripMenuItem, iNVENTARIOToolStripMenuItem, pROVEEDORESToolStripMenuItem, pEDIDOSToolStripMenuItem, agregarEmpleadoToolStripMenuItem, aLERTASToolStripMenuItem, sESIONToolStripMenuItem });
+            mnsBarra.Items.AddRange(new ToolStripItem[] { iNICIOToolStripMenuItem, iNVENTARIOToolStripMenuItem, pROVEEDORESToolStripMenuItem, pEDIDOSToolStripMenuItem, aGREGARPEDIDOToolStripMenuItem, agregarEmpleadoToolStripMenuItem, aLERTASToolStripMenuItem, sESIONToolStripMenuItem });
             mnsBarra.Location = new Point(0, 0);
             mnsBarra.Name = "mnsBarra";
             mnsBarra.Size = new Size(1066, 29);
@@ -77,6 +78,13 @@
             pEDIDOSToolStripMenuItem.Text = "PEDIDOS";
             pEDIDOSToolStripMenuItem.Click += pEDIDOSToolStripMenuItem_Click;
             // 
+            // aGREGARPEDIDOToolStripMenuItem
+            // 
+            aGREGARPEDIDOToolStripMenuItem.Name = "aGREGARPEDIDOToolStripMenuItem";
+            aGREGARPEDIDOToolStripMenuItem.Size = new Size(156, 25);
+            aGREGARPEDIDOToolStripMenuItem.Text = "AGREGAR PEDIDO";
+            aGREGARPEDIDOToolStripMenuItem.Click += aGREGARPEDIDOToolStripMenuItem_Click;
+            // 
             // agregarEmpleadoToolStripMenuItem
             // 
             agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
@@ -102,7 +110,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.IndianRed;
+            BackColor = Color.White;
             ClientSize = new Size(1066, 615);
             Controls.Add(mnsBarra);
             IsMdiContainer = true;
@@ -126,5 +134,6 @@
         private ToolStripMenuItem pEDIDOSToolStripMenuItem;
         private ToolStripMenuItem sESIONToolStripMenuItem;
         private ToolStripMenuItem aLERTASToolStripMenuItem;
+        private ToolStripMenuItem aGREGARPEDIDOToolStripMenuItem;
     }
 }

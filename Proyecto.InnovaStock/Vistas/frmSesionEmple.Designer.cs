@@ -52,6 +52,7 @@
             iNICIOToolStripMenuItem.Name = "iNICIOToolStripMenuItem";
             iNICIOToolStripMenuItem.Size = new Size(69, 25);
             iNICIOToolStripMenuItem.Text = "INICIO";
+            iNICIOToolStripMenuItem.Click += iNICIOToolStripMenuItem_Click;
             // 
             // pEDIDOSToolStripMenuItem
             // 
@@ -65,6 +66,7 @@
             sEToolStripMenuItem.Name = "sEToolStripMenuItem";
             sEToolStripMenuItem.Size = new Size(78, 25);
             sEToolStripMenuItem.Text = "SESION";
+            sEToolStripMenuItem.Click += sEToolStripMenuItem_Click;
             // 
             // pictureBox2
             // 

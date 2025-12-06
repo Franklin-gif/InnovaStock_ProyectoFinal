@@ -30,6 +30,10 @@
         {
             label1 = new Label();
             label2 = new Label();
+            grpPedidos = new GroupBox();
+            dataGridView1 = new DataGridView();
+            panel1 = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -38,17 +42,13 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
-            grpPedidos = new GroupBox();
-            dataGridView1 = new DataGridView();
             button1 = new Button();
-            panel1 = new Panel();
             panel2 = new Panel();
-            tableLayoutPanel1 = new TableLayoutPanel();
             grpPedidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -76,6 +76,61 @@
             label2.Size = new Size(233, 26);
             label2.TabIndex = 2;
             label2.Text = "Hacer un nuevo pedido";
+            // 
+            // grpPedidos
+            // 
+            grpPedidos.BackColor = Color.White;
+            grpPedidos.BackgroundImage = Properties.Resources.fondo;
+            grpPedidos.Controls.Add(dataGridView1);
+            grpPedidos.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            grpPedidos.ForeColor = Color.White;
+            grpPedidos.Location = new Point(25, 29);
+            grpPedidos.Name = "grpPedidos";
+            grpPedidos.Size = new Size(790, 187);
+            grpPedidos.TabIndex = 12;
+            grpPedidos.TabStop = false;
+            grpPedidos.Text = "Pedidos";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(30, 25);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(742, 148);
+            dataGridView1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.None;
+            panel1.Controls.Add(grpPedidos);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(117, 13);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(835, 215);
+            panel1.TabIndex = 14;
+            panel1.Paint += panel1_Paint;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.BackColor = Color.Transparent;
+            tableLayoutPanel1.BackgroundImage = Properties.Resources.fondo;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel1.Controls.Add(panel2, 0, 1);
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 328F));
+            tableLayoutPanel1.Size = new Size(1070, 569);
+            tableLayoutPanel1.TabIndex = 16;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // label3
             // 
@@ -155,32 +210,6 @@
             textBox4.Size = new Size(414, 83);
             textBox4.TabIndex = 10;
             // 
-            // grpPedidos
-            // 
-            grpPedidos.BackColor = Color.White;
-            grpPedidos.BackgroundImage = Properties.Resources.fondo;
-            grpPedidos.Controls.Add(dataGridView1);
-            grpPedidos.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            grpPedidos.ForeColor = Color.White;
-            grpPedidos.Location = new Point(25, 29);
-            grpPedidos.Name = "grpPedidos";
-            grpPedidos.Size = new Size(790, 187);
-            grpPedidos.TabIndex = 12;
-            grpPedidos.TabStop = false;
-            grpPedidos.Text = "Pedidos";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.BackgroundColor = SystemColors.Control;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(30, 25);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(742, 148);
-            dataGridView1.TabIndex = 0;
-            // 
             // button1
             // 
             button1.BackColor = Color.DimGray;
@@ -192,18 +221,6 @@
             button1.TabIndex = 13;
             button1.Text = "Realizar Pedido";
             button1.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            panel1.Anchor = AnchorStyles.None;
-            panel1.Controls.Add(grpPedidos);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(117, 13);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(835, 215);
-            panel1.TabIndex = 14;
-            panel1.Paint += panel1_Paint;
             // 
             // panel2
             // 
@@ -222,23 +239,6 @@
             panel2.Size = new Size(685, 317);
             panel2.TabIndex = 15;
             // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.BackColor = Color.Transparent;
-            tableLayoutPanel1.BackgroundImage = Properties.Resources.fondo;
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
-            tableLayoutPanel1.Controls.Add(panel2, 0, 1);
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 328F));
-            tableLayoutPanel1.Size = new Size(1070, 569);
-            tableLayoutPanel1.TabIndex = 16;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
-            // 
             // frmPedidosEmple
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -251,9 +251,9 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -261,19 +261,19 @@
 
         private Label label1;
         private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
         private GroupBox grpPedidos;
         private DataGridView dataGridView1;
-        private Button button1;
         private Panel panel1;
-        private Panel panel2;
         private TableLayoutPanel tableLayoutPanel1;
+        private Panel panel2;
+        private Button button1;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
     }
 }

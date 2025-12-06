@@ -30,5 +30,36 @@ namespace Proyecto.InnovaStock
             PedidosEmple.WindowState = FormWindowState.Maximized;
             PedidosEmple.Show();
         }
+
+        private void iNICIOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void sEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "¿Deseas cerrar sesión?",
+                "Confirmación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                // Cerrar todos los formularios excepto frmInicio
+                foreach (Form frm in Application.OpenForms.Cast<Form>().ToList())
+                {
+                    if (!(frm is frmInicio))  // NO cerrar el formulario de inicio
+                    {
+                        frm.Close();
+                    }
+                }
+
+                // Crear y mostrar nuevamente el inicio de sesión
+                frmInicio inicio = new frmInicio();
+                inicio.Show();
+            }
+        }
     }
 }

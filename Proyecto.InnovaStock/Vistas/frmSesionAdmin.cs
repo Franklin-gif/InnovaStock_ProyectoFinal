@@ -32,7 +32,7 @@ namespace Proyecto.InnovaStock
 
         private void iNICIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void iNVENTARIOToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,6 +100,15 @@ namespace Proyecto.InnovaStock
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void aGREGARPEDIDOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarEmpleadoAdmin AgregarEmpleadoAdmin = new frmAgregarEmpleadoAdmin();
+            AgregarEmpleadoAdmin.MdiParent = this;
+            AgregarEmpleadoAdmin.WindowState = FormWindowState.Maximized;
+            AgregarEmpleadoAdmin.Show();
 
         }
     }
