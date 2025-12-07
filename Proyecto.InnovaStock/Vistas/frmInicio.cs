@@ -1,7 +1,10 @@
 ﻿using Newtonsoft.Json;
 using Proyecto.InnovaStock.Modelo;
+using System;
+using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Proyecto.InnovaStock
 {
@@ -13,8 +16,7 @@ namespace Proyecto.InnovaStock
         {
             InitializeComponent();
 
-
-            // MISMA URL QUE EL HTML
+            // Configuración del cliente HTTP
             cliente.BaseAddress = new Uri("http://localhost:5286/api/");
             cliente.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -36,10 +38,8 @@ namespace Proyecto.InnovaStock
 
             if (!response.IsSuccessStatusCode)
             {
-
                 MessageBox.Show("Usuario o contraseña incorrectos");
                 return;
-
             }
 
             var empleadoLogueado = JsonConvert.DeserializeObject<Empleado>(jsonResponse);
@@ -60,26 +60,21 @@ namespace Proyecto.InnovaStock
             }
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtContra.UseSystemPasswordChar)
-            {
-                txtContra.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtContra.UseSystemPasswordChar = true;
-            }
+            // Mostrar u ocultar contraseña
+            txtContra.UseSystemPasswordChar = !txtContra.UseSystemPasswordChar;
         }
 
         private void frmInicio_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-
-=======
+            // Maximizar ventana al iniciar
             this.WindowState = FormWindowState.Maximized;
->>>>>>> 6520f20718d8bd4989232acc222b8f84ec8058d5
+        }
+
+        private void btmIcon_Paint(object sender, PaintEventArgs e)
+        {
+            // No se está usando actualmente
         }
     }
 }

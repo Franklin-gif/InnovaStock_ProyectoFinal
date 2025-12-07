@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 using NLog;
-=======
 using Proyecto.InnovaStock.Vistas;
->>>>>>> 4d10fae4c1214ae0a694647818768d8efeff5f50
+using System;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Proyecto.InnovaStock
 {
@@ -25,17 +25,18 @@ namespace Proyecto.InnovaStock
             else
             {
                 // Opcional: Loggear o informar si el archivo no se encuentra
-                MessageBox.Show("Advertencia: El archivo de configuración 'nllog.config' no se encontró.", "Configuración de Log", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Advertencia: El archivo de configuración 'nllog.config' no se encontró.",
+                                "Configuración de Log", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-<<<<<<< HEAD
-            Application.Run(new frmAgregarEmpleadoAdmin ());
 
-=======
-            Application.Run(new frmSesionAdmin());
->>>>>>> 4d10fae4c1214ae0a694647818768d8efeff5f50
+            // Inicializar la configuración de la aplicación
+            ApplicationConfiguration.Initialize();
+
+            // Aquí decides cuál formulario abrir
+            // Si quieres abrir frmAgregarEmpleadoAdmin:
+            // Application.Run(new frmAgregarEmpleadoAdmin());
+            // Si quieres abrir frmSesionAdmin:
+            Application.Run(new frmInicio());
         }
     }
 }
