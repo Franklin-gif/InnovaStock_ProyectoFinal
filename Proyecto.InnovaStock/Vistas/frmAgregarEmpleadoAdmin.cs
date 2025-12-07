@@ -46,6 +46,8 @@ namespace Proyecto.InnovaStock
 
         private async void btnRegistarLider_Click(object sender, EventArgs e)
         {
+            LogEventos.Info($"Iniciando registro de nuevo empleado. Usuario: {txtUsuario.Text}");
+
             var nuevoEmpleado = new Usuario
             {
                 idEmpleado = 0,
@@ -56,27 +58,42 @@ namespace Proyecto.InnovaStock
                 estado = "Activo"
             };
 
-            var json = JsonConvert.SerializeObject(nuevoEmpleado);
-
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var response = await cliente.PostAsync("Empleado", content);
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                MessageBox.Show("Empleado registrado correctamente", "Éxito",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var json = JsonConvert.SerializeObject(nuevoEmpleado);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                txtNombre.Clear();
-                txtUsuario.Clear();
-                txtContrasena.Clear();
-                txtCorreo.Clear();
+                LogEventos.Debug($"Enviando Petición POST a la URL: Empleado con JSON: {json}");
+
+                var response = await cliente.PostAsync("Empleado", content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    LogEventos.Info($"Empleado '{txtUsuario.Text}' registrado correctamente. Estado HTTP: {response.StatusCode}");
+
+                    MessageBox.Show("Empleado registrado correctamente", "Éxito",
+                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtNombre.Clear();
+                    txtUsuario.Clear();
+                    txtContrasena.Clear();
+                    txtCorreo.Clear();
+                }
+                else
+                {
+                    string error = await response.Content.ReadAsStringAsync();
+                    LogEventos.Error(null, $"❌ Error al registrar empleado '{txtUsuario.Text}'. Estado HTTP: {response.StatusCode}. Respuesta: {error}");
+
+                    MessageBox.Show("Error al registrar: " + error, "Error",
+                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                string error = await response.Content.ReadAsStringAsync();
-                MessageBox.Show("Error al registrar: " + error, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LogEventos.Fatal(ex, $"Error FATAL de Cliente/Red al intentar registrar empleado '{txtUsuario.Text}'.");
+
+                MessageBox.Show("Ocurrió un error inesperado de red o serialización.", "Error Crítico",
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
