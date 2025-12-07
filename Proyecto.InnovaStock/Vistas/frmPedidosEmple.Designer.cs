@@ -34,16 +34,16 @@
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            button1 = new Button();
             panel2 = new Panel();
+            button1 = new Button();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             grpPedidos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -123,6 +123,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 0, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
@@ -131,96 +132,6 @@
             tableLayoutPanel1.Size = new Size(1070, 569);
             tableLayoutPanel1.TabIndex = 16;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Franklin Gothic Heavy", 12F);
-            label3.ForeColor = Color.White;
-            label3.Image = Properties.Resources.fondo;
-            label3.Location = new Point(55, 81);
-            label3.Name = "label3";
-            label3.Size = new Size(82, 21);
-            label3.TabIndex = 3;
-            label3.Text = "Producto:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.DimGray;
-            label4.Font = new Font("Franklin Gothic Heavy", 12F);
-            label4.ForeColor = Color.Transparent;
-            label4.Image = Properties.Resources.fondo;
-            label4.Location = new Point(55, 26);
-            label4.Name = "label4";
-            label4.Size = new Size(91, 21);
-            label4.TabIndex = 4;
-            label4.Text = "Proveedor:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Franklin Gothic Heavy", 12F);
-            label5.ForeColor = Color.White;
-            label5.Image = Properties.Resources.fondo;
-            label5.Location = new Point(55, 137);
-            label5.Name = "label5";
-            label5.Size = new Size(80, 21);
-            label5.TabIndex = 5;
-            label5.Text = "Cantidad:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Franklin Gothic Heavy", 12F);
-            label6.ForeColor = Color.White;
-            label6.Image = Properties.Resources.fondo;
-            label6.Location = new Point(55, 190);
-            label6.Name = "label6";
-            label6.Size = new Size(102, 21);
-            label6.TabIndex = 6;
-            label6.Text = "Descripcion:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(166, 27);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(218, 23);
-            textBox1.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(166, 79);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(218, 23);
-            textBox2.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(166, 135);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(132, 23);
-            textBox3.TabIndex = 9;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(184, 190);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(414, 83);
-            textBox4.TabIndex = 10;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.DimGray;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(302, 279);
-            button1.Name = "button1";
-            button1.Size = new Size(171, 31);
-            button1.TabIndex = 13;
-            button1.Text = "Realizar Pedido";
-            button1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -238,6 +149,96 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(685, 317);
             panel2.TabIndex = 15;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.DimGray;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(302, 279);
+            button1.Name = "button1";
+            button1.Size = new Size(171, 31);
+            button1.TabIndex = 13;
+            button1.Text = "Realizar Pedido";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(184, 190);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(414, 83);
+            textBox4.TabIndex = 10;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(166, 135);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(132, 23);
+            textBox3.TabIndex = 9;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(166, 79);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(218, 23);
+            textBox2.TabIndex = 8;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(166, 27);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(218, 23);
+            textBox1.TabIndex = 7;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Franklin Gothic Heavy", 12F);
+            label6.ForeColor = Color.White;
+            label6.Image = Properties.Resources.fondo;
+            label6.Location = new Point(55, 190);
+            label6.Name = "label6";
+            label6.Size = new Size(102, 21);
+            label6.TabIndex = 6;
+            label6.Text = "Descripcion:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Franklin Gothic Heavy", 12F);
+            label5.ForeColor = Color.White;
+            label5.Image = Properties.Resources.fondo;
+            label5.Location = new Point(55, 137);
+            label5.Name = "label5";
+            label5.Size = new Size(80, 21);
+            label5.TabIndex = 5;
+            label5.Text = "Cantidad:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.DimGray;
+            label4.Font = new Font("Franklin Gothic Heavy", 12F);
+            label4.ForeColor = Color.Transparent;
+            label4.Image = Properties.Resources.fondo;
+            label4.Location = new Point(55, 26);
+            label4.Name = "label4";
+            label4.Size = new Size(91, 21);
+            label4.TabIndex = 4;
+            label4.Text = "Proveedor:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Franklin Gothic Heavy", 12F);
+            label3.ForeColor = Color.White;
+            label3.Image = Properties.Resources.fondo;
+            label3.Location = new Point(55, 81);
+            label3.Name = "label3";
+            label3.Size = new Size(82, 21);
+            label3.TabIndex = 3;
+            label3.Text = "Producto:";
             // 
             // frmPedidosEmple
             // 

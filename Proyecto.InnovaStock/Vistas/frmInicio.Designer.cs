@@ -169,6 +169,7 @@
             Controls.Add(panel1);
             Name = "frmInicio";
             Text = "frmInicio";
+            Load += frmInicio_Load;
             panel1.ResumeLayout(false);
             btmIcon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

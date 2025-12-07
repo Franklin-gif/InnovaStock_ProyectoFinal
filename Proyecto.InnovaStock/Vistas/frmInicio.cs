@@ -72,5 +72,10 @@ namespace Proyecto.InnovaStock
                 txtContra.UseSystemPasswordChar = true;
             }
         }
+
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

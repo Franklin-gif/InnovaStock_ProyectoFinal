@@ -33,7 +33,7 @@ namespace Proyecto.InnovaStock
 
         private void iNICIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void sEToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,6 +60,11 @@ namespace Proyecto.InnovaStock
                 frmInicio inicio = new frmInicio();
                 inicio.Show();
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

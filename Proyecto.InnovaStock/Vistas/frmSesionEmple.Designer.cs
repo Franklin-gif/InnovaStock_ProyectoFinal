@@ -32,9 +32,7 @@
             iNICIOToolStripMenuItem = new ToolStripMenuItem();
             pEDIDOSToolStripMenuItem = new ToolStripMenuItem();
             sEToolStripMenuItem = new ToolStripMenuItem();
-            pictureBox2 = new PictureBox();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -68,23 +66,13 @@
             sEToolStripMenuItem.Text = "SESION";
             sEToolStripMenuItem.Click += sEToolStripMenuItem_Click;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Dock = DockStyle.Bottom;
-            pictureBox2.Image = Properties.Resources.fondo;
-            pictureBox2.Location = new Point(0, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1050, 576);
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
-            // 
             // frmSesionEmple
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
             ClientSize = new Size(1050, 576);
             Controls.Add(menuStrip1);
-            Controls.Add(pictureBox2);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "frmSesionEmple";
@@ -92,7 +80,6 @@
             Load += frmSesionEmple_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -103,6 +90,5 @@
         private ToolStripMenuItem iNICIOToolStripMenuItem;
         private ToolStripMenuItem pEDIDOSToolStripMenuItem;
         private ToolStripMenuItem sEToolStripMenuItem;
-        private PictureBox pictureBox2;
     }
 }
