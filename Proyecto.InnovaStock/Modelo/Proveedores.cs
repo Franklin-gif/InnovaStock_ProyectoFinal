@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 
 namespace Proyecto.InnovaStock.Modelo
@@ -18,5 +19,16 @@ namespace Proyecto.InnovaStock.Modelo
             Telefono = telefono;
             Estado = estado;
         }
+=======
+﻿namespace Proyecto.InnovaStock.Modelo
+{
+    public class Proveedor
+    {
+        public int IdProveedor { get; set; }
+        public string Nombre { get; set; }
+        public string Telefono { get; set; }
+        public string Correo { get; set; }
+        public string Estado { get; set; }
+>>>>>>> 5011455 (Agregando CRUD AMEN GLORIA A DIOS)
     }
 }

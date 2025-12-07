@@ -31,11 +31,19 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             grpProveedor = new GroupBox();
             lblEditar = new Label();
+<<<<<<< HEAD
             btnConfirmar = new Button();
             cbEstadoPro = new ComboBox();
             txtTelefonoPro = new TextBox();
             txtCorreoPro = new TextBox();
             txtNombrePro = new TextBox();
+=======
+            btmCon = new Button();
+            cnbEstado = new ComboBox();
+            txtTel = new TextBox();
+            txtCorreo = new TextBox();
+            txtProv = new TextBox();
+>>>>>>> 5011455 (Agregando CRUD AMEN GLORIA A DIOS)
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -70,18 +78,26 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 442F));
             tableLayoutPanel1.Size = new Size(1066, 615);
             tableLayoutPanel1.TabIndex = 2;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
+           
             // 
             // grpProveedor
             // 
             grpProveedor.Anchor = AnchorStyles.Right;
             grpProveedor.BackgroundImage = Properties.Resources.fondo;
             grpProveedor.Controls.Add(lblEditar);
+<<<<<<< HEAD
             grpProveedor.Controls.Add(btnConfirmar);
             grpProveedor.Controls.Add(cbEstadoPro);
             grpProveedor.Controls.Add(txtTelefonoPro);
             grpProveedor.Controls.Add(txtCorreoPro);
             grpProveedor.Controls.Add(txtNombrePro);
+=======
+            grpProveedor.Controls.Add(btmCon);
+            grpProveedor.Controls.Add(cnbEstado);
+            grpProveedor.Controls.Add(txtTel);
+            grpProveedor.Controls.Add(txtCorreo);
+            grpProveedor.Controls.Add(txtProv);
+>>>>>>> 5011455 (Agregando CRUD AMEN GLORIA A DIOS)
             grpProveedor.Controls.Add(label6);
             grpProveedor.Controls.Add(label5);
             grpProveedor.Controls.Add(label4);
@@ -94,7 +110,7 @@
             grpProveedor.TabIndex = 1;
             grpProveedor.TabStop = false;
             grpProveedor.Text = "Proveedor";
-            grpProveedor.Enter += grpProveedor_Enter;
+       
             // 
             // lblEditar
             // 
@@ -104,8 +120,9 @@
             lblEditar.Size = new Size(157, 21);
             lblEditar.TabIndex = 14;
             lblEditar.Text = "Editando Proveedor";
-            lblEditar.Click += label3_Click;
+            
             // 
+<<<<<<< HEAD
             // btnConfirmar
             // 
             btnConfirmar.BackColor = SystemColors.ControlDarkDark;
@@ -147,6 +164,49 @@
             txtNombrePro.Name = "txtNombrePro";
             txtNombrePro.Size = new Size(154, 26);
             txtNombrePro.TabIndex = 6;
+=======
+            // btmCon
+            // 
+            btmCon.BackColor = SystemColors.ControlDarkDark;
+            btmCon.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btmCon.Location = new Point(247, 389);
+            btmCon.Name = "btmCon";
+            btmCon.Size = new Size(220, 40);
+            btmCon.TabIndex = 12;
+            btmCon.Text = "Confirmar";
+            btmCon.UseVisualStyleBackColor = false;
+        
+            // 
+            // cnbEstado
+            // 
+            cnbEstado.FormattingEnabled = true;
+            cnbEstado.Items.AddRange(new object[] { "Activo", "Inactivo" });
+            cnbEstado.Location = new Point(37, 328);
+            cnbEstado.Name = "cnbEstado";
+            cnbEstado.Size = new Size(154, 29);
+            cnbEstado.TabIndex = 11;
+            // 
+            // txtTel
+            // 
+            txtTel.Location = new Point(37, 235);
+            txtTel.Name = "txtTel";
+            txtTel.Size = new Size(154, 26);
+            txtTel.TabIndex = 10;
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.Location = new Point(37, 152);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(154, 26);
+            txtCorreo.TabIndex = 8;
+            // 
+            // txtProv
+            // 
+            txtProv.Location = new Point(37, 69);
+            txtProv.Name = "txtProv";
+            txtProv.Size = new Size(154, 26);
+            txtProv.TabIndex = 6;
+>>>>>>> 5011455 (Agregando CRUD AMEN GLORIA A DIOS)
             // 
             // label6
             // 
@@ -188,7 +248,11 @@
             label1.Size = new Size(176, 21);
             label1.TabIndex = 0;
             label1.Text = "Nombre del proveedor";
+<<<<<<< HEAD
             label1.Click += label1_Click;
+=======
+           
+>>>>>>> 5011455 (Agregando CRUD AMEN GLORIA A DIOS)
             // 
             // panel1
             // 
@@ -200,7 +264,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(99, 144);
             panel1.TabIndex = 15;
-            panel1.Paint += panel1_Paint;
+           
             // 
             // cbxEliminar
             // 
@@ -211,7 +275,7 @@
             cbxEliminar.TabIndex = 14;
             cbxEliminar.Text = "Eliminar";
             cbxEliminar.UseVisualStyleBackColor = true;
-            cbxEliminar.CheckedChanged += cbxEliminar_CheckedChanged;
+        
             // 
             // cbxEditar
             // 
@@ -222,7 +286,7 @@
             cbxEditar.TabIndex = 13;
             cbxEditar.Text = "Editar";
             cbxEditar.UseVisualStyleBackColor = true;
-            cbxEditar.CheckedChanged += cbxEditar_CheckedChanged;
+          
             // 
             // cbxAñadir
             // 
@@ -233,7 +297,18 @@
             cbxAñadir.TabIndex = 3;
             cbxAñadir.Text = "Añadir";
             cbxAñadir.UseVisualStyleBackColor = true;
-            cbxAñadir.CheckedChanged += cbxAñadir_CheckedChanged;
+           
+            // 
+            // dgvProveedores
+            // 
+            dgvProveedores.Anchor = AnchorStyles.Right;
+            dgvProveedores.BackgroundColor = Color.White;
+            dgvProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProveedores.Location = new Point(364, 7);
+            dgvProveedores.Name = "dgvProveedores";
+            dgvProveedores.Size = new Size(536, 158);
+            dgvProveedores.TabIndex = 3;
+            
             // 
             // dgvProveedores
             // 
@@ -267,11 +342,19 @@
         #endregion
         private TableLayoutPanel tableLayoutPanel1;
         private GroupBox grpProveedor;
+<<<<<<< HEAD
         private Button btnConfirmar;
         private ComboBox cbEstadoPro;
         private TextBox txtTelefonoPro;
         private TextBox txtCorreoPro;
         private TextBox txtNombrePro;
+=======
+        private Button btmCon;
+        private ComboBox cnbEstado;
+        private TextBox txtTel;
+        private TextBox txtCorreo;
+        private TextBox txtProv;
+>>>>>>> 5011455 (Agregando CRUD AMEN GLORIA A DIOS)
         private Label label6;
         private Label label5;
         private Label label4;
