@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             grpEmpleado = new GroupBox();
-            textBox3 = new TextBox();
+            btnVer = new Button();
+            txtUsuario = new TextBox();
             label4 = new Label();
-            button1 = new Button();
-            textBox4 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            btnRegistarLider = new Button();
+            txtContrasena = new TextBox();
+            txtCorreo = new TextBox();
+            txtNombre = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -47,72 +48,88 @@
             // 
             grpEmpleado.Anchor = AnchorStyles.None;
             grpEmpleado.BackColor = Color.Transparent;
-            grpEmpleado.Controls.Add(textBox3);
+            grpEmpleado.Controls.Add(btnVer);
+            grpEmpleado.Controls.Add(txtUsuario);
             grpEmpleado.Controls.Add(label4);
-            grpEmpleado.Controls.Add(button1);
-            grpEmpleado.Controls.Add(textBox4);
-            grpEmpleado.Controls.Add(textBox2);
-            grpEmpleado.Controls.Add(textBox1);
+            grpEmpleado.Controls.Add(btnRegistarLider);
+            grpEmpleado.Controls.Add(txtContrasena);
+            grpEmpleado.Controls.Add(txtCorreo);
+            grpEmpleado.Controls.Add(txtNombre);
             grpEmpleado.Controls.Add(label3);
             grpEmpleado.Controls.Add(label2);
             grpEmpleado.Controls.Add(label1);
             grpEmpleado.Font = new Font("Franklin Gothic Heavy", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpEmpleado.ForeColor = Color.White;
-            grpEmpleado.Location = new Point(180, 162);
+            grpEmpleado.Location = new Point(180, 152);
             grpEmpleado.Name = "grpEmpleado";
-            grpEmpleado.Size = new Size(706, 291);
+            grpEmpleado.Size = new Size(706, 311);
             grpEmpleado.TabIndex = 2;
             grpEmpleado.TabStop = false;
             grpEmpleado.Text = "Agregar Empleado (Lider)";
             // 
-            // textBox3
+            // btnVer
             // 
-            textBox3.Location = new Point(25, 110);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(154, 26);
-            textBox3.TabIndex = 14;
+            btnVer.BackColor = Color.MediumOrchid;
+            btnVer.BackgroundImage = Properties.Resources.fondo;
+            btnVer.ForeColor = Color.Black;
+            btnVer.Location = new Point(185, 248);
+            btnVer.Name = "btnVer";
+            btnVer.Size = new Size(57, 28);
+            btnVer.TabIndex = 15;
+            btnVer.Text = "👀";
+            btnVer.UseVisualStyleBackColor = false;
+            btnVer.Click += btnVer_Click;
+            // 
+            // txtUsuario
+            // 
+            txtUsuario.Location = new Point(25, 110);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(154, 26);
+            txtUsuario.TabIndex = 14;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(25, 86);
+            label4.Location = new Point(25, 154);
             label4.Name = "label4";
             label4.Size = new Size(61, 21);
             label4.TabIndex = 13;
             label4.Text = "Correo";
             // 
-            // button1
+            // btnRegistarLider
             // 
-            button1.BackColor = Color.DimGray;
-            button1.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(312, 236);
-            button1.Name = "button1";
-            button1.Size = new Size(156, 38);
-            button1.TabIndex = 12;
-            button1.Text = "Registar Lider";
-            button1.UseVisualStyleBackColor = false;
+            btnRegistarLider.BackColor = Color.DimGray;
+            btnRegistarLider.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRegistarLider.ForeColor = Color.White;
+            btnRegistarLider.Location = new Point(312, 236);
+            btnRegistarLider.Name = "btnRegistarLider";
+            btnRegistarLider.Size = new Size(156, 38);
+            btnRegistarLider.TabIndex = 12;
+            btnRegistarLider.Text = "Registar Lider";
+            btnRegistarLider.UseVisualStyleBackColor = false;
+            btnRegistarLider.Click += btnRegistarLider_Click;
             // 
-            // textBox4
+            // txtContrasena
             // 
-            textBox4.Location = new Point(25, 248);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(154, 26);
-            textBox4.TabIndex = 9;
+            txtContrasena.Location = new Point(25, 248);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.Size = new Size(154, 26);
+            txtContrasena.TabIndex = 9;
+            txtContrasena.UseSystemPasswordChar = true;
             // 
-            // textBox2
+            // txtCorreo
             // 
-            textBox2.Location = new Point(25, 178);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(154, 26);
-            textBox2.TabIndex = 7;
+            txtCorreo.Location = new Point(25, 178);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(154, 26);
+            txtCorreo.TabIndex = 7;
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.Location = new Point(25, 46);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(238, 26);
-            textBox1.TabIndex = 6;
+            txtNombre.Location = new Point(25, 46);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(238, 26);
+            txtNombre.TabIndex = 6;
             // 
             // label3
             // 
@@ -126,7 +143,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 154);
+            label2.Location = new Point(25, 86);
             label2.Name = "label2";
             label2.Size = new Size(67, 21);
             label2.TabIndex = 1;
@@ -174,15 +191,16 @@
 
         #endregion
         private GroupBox grpEmpleado;
-        private Button button1;
-        private TextBox textBox4;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private Button btnRegistarLider;
+        private TextBox txtContrasena;
+        private TextBox txtCorreo;
+        private TextBox txtNombre;
         private Label label3;
         private Label label2;
         private Label label1;
         private TableLayoutPanel tableLayoutPanel1;
-        private TextBox textBox3;
+        private TextBox txtUsuario;
         private Label label4;
+        private Button btnVer;
     }
 }
