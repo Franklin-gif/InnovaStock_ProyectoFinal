@@ -72,5 +72,14 @@ namespace Proyecto.InnovaStock
                 txtContra.UseSystemPasswordChar = true;
             }
         }
+
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+<<<<<<< HEAD
+
+=======
+            this.WindowState = FormWindowState.Maximized;
+>>>>>>> 6520f20718d8bd4989232acc222b8f84ec8058d5
+        }
     }
 }

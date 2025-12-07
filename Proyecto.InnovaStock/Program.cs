@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 using NLog;
+=======
+using Proyecto.InnovaStock.Vistas;
+>>>>>>> 4d10fae4c1214ae0a694647818768d8efeff5f50
 
 namespace Proyecto.InnovaStock
 {
@@ -26,8 +30,12 @@ namespace Proyecto.InnovaStock
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+<<<<<<< HEAD
             Application.Run(new frmAgregarEmpleadoAdmin ());
 
+=======
+            Application.Run(new frmSesionAdmin());
+>>>>>>> 4d10fae4c1214ae0a694647818768d8efeff5f50
         }
     }
 }

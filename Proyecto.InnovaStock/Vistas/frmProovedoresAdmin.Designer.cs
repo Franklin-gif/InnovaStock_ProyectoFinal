@@ -31,24 +31,24 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             grpProveedor = new GroupBox();
             lblEditar = new Label();
-            button1 = new Button();
-            comboBox1 = new ComboBox();
-            textBox5 = new TextBox();
-            textBox3 = new TextBox();
-            textBox1 = new TextBox();
+            btnConfirmar = new Button();
+            cbEstadoPro = new ComboBox();
+            txtTelefonoPro = new TextBox();
+            txtCorreoPro = new TextBox();
+            txtNombrePro = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label1 = new Label();
-            dgvProveedores = new DataGridView();
             panel1 = new Panel();
             cbxEliminar = new CheckBox();
             cbxEditar = new CheckBox();
             cbxAñadir = new CheckBox();
+            dgvProveedores = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
             grpProveedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvProveedores).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvProveedores).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -77,11 +77,11 @@
             grpProveedor.Anchor = AnchorStyles.Right;
             grpProveedor.BackgroundImage = Properties.Resources.fondo;
             grpProveedor.Controls.Add(lblEditar);
-            grpProveedor.Controls.Add(button1);
-            grpProveedor.Controls.Add(comboBox1);
-            grpProveedor.Controls.Add(textBox5);
-            grpProveedor.Controls.Add(textBox3);
-            grpProveedor.Controls.Add(textBox1);
+            grpProveedor.Controls.Add(btnConfirmar);
+            grpProveedor.Controls.Add(cbEstadoPro);
+            grpProveedor.Controls.Add(txtTelefonoPro);
+            grpProveedor.Controls.Add(txtCorreoPro);
+            grpProveedor.Controls.Add(txtNombrePro);
             grpProveedor.Controls.Add(label6);
             grpProveedor.Controls.Add(label5);
             grpProveedor.Controls.Add(label4);
@@ -106,46 +106,47 @@
             lblEditar.Text = "Editando Proveedor";
             lblEditar.Click += label3_Click;
             // 
-            // button1
+            // btnConfirmar
             // 
-            button1.BackColor = SystemColors.ControlDarkDark;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(247, 389);
-            button1.Name = "button1";
-            button1.Size = new Size(220, 40);
-            button1.TabIndex = 12;
-            button1.Text = "Confirmar";
-            button1.UseVisualStyleBackColor = false;
+            btnConfirmar.BackColor = SystemColors.ControlDarkDark;
+            btnConfirmar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnConfirmar.Location = new Point(247, 389);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new Size(220, 40);
+            btnConfirmar.TabIndex = 12;
+            btnConfirmar.Text = "Confirmar";
+            btnConfirmar.UseVisualStyleBackColor = false;
+            btnConfirmar.Click += button1_Click;
             // 
-            // comboBox1
+            // cbEstadoPro
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Activo", "Inactivo" });
-            comboBox1.Location = new Point(37, 328);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(154, 29);
-            comboBox1.TabIndex = 11;
+            cbEstadoPro.FormattingEnabled = true;
+            cbEstadoPro.Items.AddRange(new object[] { "Activo", "Inactivo" });
+            cbEstadoPro.Location = new Point(37, 328);
+            cbEstadoPro.Name = "cbEstadoPro";
+            cbEstadoPro.Size = new Size(154, 29);
+            cbEstadoPro.TabIndex = 11;
             // 
-            // textBox5
+            // txtTelefonoPro
             // 
-            textBox5.Location = new Point(37, 235);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(154, 26);
-            textBox5.TabIndex = 10;
+            txtTelefonoPro.Location = new Point(37, 235);
+            txtTelefonoPro.Name = "txtTelefonoPro";
+            txtTelefonoPro.Size = new Size(154, 26);
+            txtTelefonoPro.TabIndex = 10;
             // 
-            // textBox3
+            // txtCorreoPro
             // 
-            textBox3.Location = new Point(37, 152);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(154, 26);
-            textBox3.TabIndex = 8;
+            txtCorreoPro.Location = new Point(37, 152);
+            txtCorreoPro.Name = "txtCorreoPro";
+            txtCorreoPro.Size = new Size(154, 26);
+            txtCorreoPro.TabIndex = 8;
             // 
-            // textBox1
+            // txtNombrePro
             // 
-            textBox1.Location = new Point(37, 69);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(154, 26);
-            textBox1.TabIndex = 6;
+            txtNombrePro.Location = new Point(37, 69);
+            txtNombrePro.Name = "txtNombrePro";
+            txtNombrePro.Size = new Size(154, 26);
+            txtNombrePro.TabIndex = 6;
             // 
             // label6
             // 
@@ -188,17 +189,6 @@
             label1.TabIndex = 0;
             label1.Text = "Nombre del proveedor";
             label1.Click += label1_Click;
-            // 
-            // dgvProveedores
-            // 
-            dgvProveedores.Anchor = AnchorStyles.Right;
-            dgvProveedores.BackgroundColor = Color.White;
-            dgvProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProveedores.Location = new Point(364, 7);
-            dgvProveedores.Name = "dgvProveedores";
-            dgvProveedores.Size = new Size(536, 158);
-            dgvProveedores.TabIndex = 3;
-            dgvProveedores.CellContentClick += dgvProveedores_CellContentClick;
             // 
             // panel1
             // 
@@ -245,6 +235,17 @@
             cbxAñadir.UseVisualStyleBackColor = true;
             cbxAñadir.CheckedChanged += cbxAñadir_CheckedChanged;
             // 
+            // dgvProveedores
+            // 
+            dgvProveedores.Anchor = AnchorStyles.Right;
+            dgvProveedores.BackgroundColor = Color.White;
+            dgvProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProveedores.Location = new Point(364, 7);
+            dgvProveedores.Name = "dgvProveedores";
+            dgvProveedores.Size = new Size(536, 158);
+            dgvProveedores.TabIndex = 3;
+            dgvProveedores.CellContentClick += dgvProveedores_CellContentClick;
+            // 
             // frmProovedoresAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -253,23 +254,24 @@
             Controls.Add(tableLayoutPanel1);
             Name = "frmProovedoresAdmin";
             Text = "frmProovedoresAdmin";
+            Load += frmProovedoresAdmin_Load;
             tableLayoutPanel1.ResumeLayout(false);
             grpProveedor.ResumeLayout(false);
             grpProveedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvProveedores).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvProveedores).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private TableLayoutPanel tableLayoutPanel1;
         private GroupBox grpProveedor;
-        private Button button1;
-        private ComboBox comboBox1;
-        private TextBox textBox5;
-        private TextBox textBox3;
-        private TextBox textBox1;
+        private Button btnConfirmar;
+        private ComboBox cbEstadoPro;
+        private TextBox txtTelefonoPro;
+        private TextBox txtCorreoPro;
+        private TextBox txtNombrePro;
         private Label label6;
         private Label label5;
         private Label label4;
