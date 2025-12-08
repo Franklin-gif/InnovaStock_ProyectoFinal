@@ -24,19 +24,12 @@ namespace Proyecto.InnovaStock
             }
             else
             {
-                // Opcional: Loggear o informar si el archivo no se encuentra
                 MessageBox.Show("Advertencia: El archivo de configuración 'nllog.config' no se encontró.",
                                 "Configuración de Log", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            // Inicializar la configuración de la aplicación
             ApplicationConfiguration.Initialize();
 
-            // Aquí decides cuál formulario abrir
-            // Si quieres abrir frmAgregarEmpleadoAdmin:
-            // Application.Run(new frmAgregarEmpleadoAdmin());
-            // Si quieres abrir frmSesionAdmin:
-            Application.Run(new frmProovedoresAdmin());
+            Application.Run(new frmInicio());
         }
     }
 }
