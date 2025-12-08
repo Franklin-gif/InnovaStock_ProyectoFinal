@@ -19,7 +19,7 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             grpProveedor = new GroupBox();
-            lblEditar = new Label();
+            lblSub = new Label();
             btnConfirmar = new Button();
             cbEstadoPro = new ComboBox();
             txtTelefonoPro = new TextBox();
@@ -45,18 +45,19 @@
             tableLayoutPanel1.BackColor = Color.Transparent;
             tableLayoutPanel1.BackgroundImage = Properties.Resources.fondo;
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 903F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 172F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 1032F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 197F));
             tableLayoutPanel1.Controls.Add(grpProveedor, 0, 1);
             tableLayoutPanel1.Controls.Add(panel1, 1, 0);
             tableLayoutPanel1.Controls.Add(dgvProveedores, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 442F));
-            tableLayoutPanel1.Size = new Size(1066, 615);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 589F));
+            tableLayoutPanel1.Size = new Size(1218, 820);
             tableLayoutPanel1.TabIndex = 2;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint_1;
             // 
@@ -64,7 +65,7 @@
             // 
             grpProveedor.Anchor = AnchorStyles.Right;
             grpProveedor.BackgroundImage = Properties.Resources.fondo;
-            grpProveedor.Controls.Add(lblEditar);
+            grpProveedor.Controls.Add(lblSub);
             grpProveedor.Controls.Add(btnConfirmar);
             grpProveedor.Controls.Add(cbEstadoPro);
             grpProveedor.Controls.Add(txtTelefonoPro);
@@ -76,71 +77,77 @@
             grpProveedor.Controls.Add(label1);
             grpProveedor.Font = new Font("Franklin Gothic Heavy", 12F);
             grpProveedor.ForeColor = Color.White;
-            grpProveedor.Location = new Point(223, 176);
+            grpProveedor.Location = new Point(255, 235);
+            grpProveedor.Margin = new Padding(3, 4, 3, 4);
             grpProveedor.Name = "grpProveedor";
-            grpProveedor.Size = new Size(677, 436);
+            grpProveedor.Padding = new Padding(3, 4, 3, 4);
+            grpProveedor.Size = new Size(774, 581);
             grpProveedor.TabIndex = 1;
             grpProveedor.TabStop = false;
             grpProveedor.Text = "Proveedor";
             // 
-            // lblEditar
+            // lblSub
             // 
-            lblEditar.AutoSize = true;
-            lblEditar.Location = new Point(208, 24);
-            lblEditar.Name = "lblEditar";
-            lblEditar.Size = new Size(157, 21);
-            lblEditar.TabIndex = 14;
-            lblEditar.Text = "Editando Proveedor";
+            lblSub.AutoSize = true;
+            lblSub.Location = new Point(38, 27);
+            lblSub.Name = "lblSub";
+            lblSub.Size = new Size(677, 25);
+            lblSub.TabIndex = 14;
+            lblSub.Text = "Editando Proveedor (Haga doble click sobre el provedor para editarlo)";
             // 
             // btnConfirmar
             // 
             btnConfirmar.BackColor = SystemColors.ControlDarkDark;
             btnConfirmar.Font = new Font("Segoe UI", 12F);
-            btnConfirmar.Location = new Point(247, 389);
+            btnConfirmar.Location = new Point(282, 519);
+            btnConfirmar.Margin = new Padding(3, 4, 3, 4);
             btnConfirmar.Name = "btnConfirmar";
-            btnConfirmar.Size = new Size(220, 40);
+            btnConfirmar.Size = new Size(251, 53);
             btnConfirmar.TabIndex = 12;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = false;
-          
             // 
             // cbEstadoPro
             // 
             cbEstadoPro.FormattingEnabled = true;
             cbEstadoPro.Items.AddRange(new object[] { "Activo", "Inactivo" });
-            cbEstadoPro.Location = new Point(37, 328);
+            cbEstadoPro.Location = new Point(42, 437);
+            cbEstadoPro.Margin = new Padding(3, 4, 3, 4);
             cbEstadoPro.Name = "cbEstadoPro";
-            cbEstadoPro.Size = new Size(154, 29);
+            cbEstadoPro.Size = new Size(175, 33);
             cbEstadoPro.TabIndex = 11;
             // 
             // txtTelefonoPro
             // 
-            txtTelefonoPro.Location = new Point(37, 235);
+            txtTelefonoPro.Location = new Point(42, 313);
+            txtTelefonoPro.Margin = new Padding(3, 4, 3, 4);
             txtTelefonoPro.Name = "txtTelefonoPro";
-            txtTelefonoPro.Size = new Size(154, 26);
+            txtTelefonoPro.Size = new Size(175, 30);
             txtTelefonoPro.TabIndex = 10;
             // 
             // txtCorreoPro
             // 
-            txtCorreoPro.Location = new Point(37, 152);
+            txtCorreoPro.Location = new Point(42, 203);
+            txtCorreoPro.Margin = new Padding(3, 4, 3, 4);
             txtCorreoPro.Name = "txtCorreoPro";
-            txtCorreoPro.Size = new Size(154, 26);
+            txtCorreoPro.Size = new Size(175, 30);
             txtCorreoPro.TabIndex = 8;
             // 
             // txtNombrePro
             // 
-            txtNombrePro.Location = new Point(37, 69);
+            txtNombrePro.Location = new Point(42, 92);
+            txtNombrePro.Margin = new Padding(3, 4, 3, 4);
             txtNombrePro.Name = "txtNombrePro";
-            txtNombrePro.Size = new Size(154, 26);
+            txtNombrePro.Size = new Size(175, 30);
             txtNombrePro.TabIndex = 6;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.Location = new Point(33, 304);
+            label6.Location = new Point(38, 405);
             label6.Name = "label6";
-            label6.Size = new Size(61, 21);
+            label6.Size = new Size(78, 25);
             label6.TabIndex = 5;
             label6.Text = "Estado";
             // 
@@ -148,9 +155,9 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Location = new Point(37, 211);
+            label5.Location = new Point(42, 281);
             label5.Name = "label5";
-            label5.Size = new Size(76, 21);
+            label5.Size = new Size(95, 25);
             label5.TabIndex = 4;
             label5.Text = "Teléfono";
             // 
@@ -158,9 +165,9 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Location = new Point(37, 128);
+            label4.Location = new Point(42, 171);
             label4.Name = "label4";
-            label4.Size = new Size(150, 21);
+            label4.Size = new Size(189, 25);
             label4.TabIndex = 3;
             label4.Text = "Correo Electrónico";
             // 
@@ -168,9 +175,9 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Location = new Point(37, 45);
+            label1.Location = new Point(42, 60);
             label1.Name = "label1";
-            label1.Size = new Size(176, 21);
+            label1.Size = new Size(225, 25);
             label1.TabIndex = 0;
             label1.Text = "Nombre del proveedor";
             label1.Click += label1_Click;
@@ -181,17 +188,19 @@
             panel1.Controls.Add(cbxEliminar);
             panel1.Controls.Add(cbxEditar);
             panel1.Controls.Add(cbxAñadir);
-            panel1.Location = new Point(939, 14);
+            panel1.Location = new Point(1074, 19);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(99, 144);
+            panel1.Size = new Size(113, 192);
             panel1.TabIndex = 15;
             // 
             // cbxEliminar
             // 
             cbxEliminar.AutoSize = true;
-            cbxEliminar.Location = new Point(12, 90);
+            cbxEliminar.Location = new Point(14, 120);
+            cbxEliminar.Margin = new Padding(3, 4, 3, 4);
             cbxEliminar.Name = "cbxEliminar";
-            cbxEliminar.Size = new Size(69, 19);
+            cbxEliminar.Size = new Size(85, 24);
             cbxEliminar.TabIndex = 14;
             cbxEliminar.Text = "Eliminar";
             cbxEliminar.UseVisualStyleBackColor = true;
@@ -199,9 +208,10 @@
             // cbxEditar
             // 
             cbxEditar.AutoSize = true;
-            cbxEditar.Location = new Point(12, 53);
+            cbxEditar.Location = new Point(14, 71);
+            cbxEditar.Margin = new Padding(3, 4, 3, 4);
             cbxEditar.Name = "cbxEditar";
-            cbxEditar.Size = new Size(56, 19);
+            cbxEditar.Size = new Size(70, 24);
             cbxEditar.TabIndex = 13;
             cbxEditar.Text = "Editar";
             cbxEditar.UseVisualStyleBackColor = true;
@@ -209,9 +219,10 @@
             // cbxAñadir
             // 
             cbxAñadir.AutoSize = true;
-            cbxAñadir.Location = new Point(12, 19);
+            cbxAñadir.Location = new Point(14, 25);
+            cbxAñadir.Margin = new Padding(3, 4, 3, 4);
             cbxAñadir.Name = "cbxAñadir";
-            cbxAñadir.Size = new Size(61, 19);
+            cbxAñadir.Size = new Size(75, 24);
             cbxAñadir.TabIndex = 3;
             cbxAñadir.Text = "Añadir";
             cbxAñadir.UseVisualStyleBackColor = true;
@@ -221,18 +232,21 @@
             dgvProveedores.Anchor = AnchorStyles.Right;
             dgvProveedores.BackgroundColor = Color.White;
             dgvProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProveedores.Location = new Point(364, 7);
+            dgvProveedores.Location = new Point(416, 10);
+            dgvProveedores.Margin = new Padding(3, 4, 3, 4);
             dgvProveedores.Name = "dgvProveedores";
-            dgvProveedores.Size = new Size(536, 158);
+            dgvProveedores.RowHeadersWidth = 51;
+            dgvProveedores.Size = new Size(613, 211);
             dgvProveedores.TabIndex = 3;
             dgvProveedores.CellContentClick += dgvProveedores_CellContentClick;
             // 
             // frmProovedoresAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1066, 615);
+            ClientSize = new Size(1218, 820);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmProovedoresAdmin";
             Text = "frmProovedoresAdmin";
             Load += frmProovedoresAdmin_Load;
@@ -266,6 +280,6 @@
         private CheckBox cbxEditar;
         private CheckBox cbxAñadir;
         private Panel panel1;
-        private Label lblEditar;
+        private Label lblSub;
     }
 }

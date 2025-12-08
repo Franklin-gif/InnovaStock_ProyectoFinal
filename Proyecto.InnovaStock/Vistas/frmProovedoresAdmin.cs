@@ -34,7 +34,7 @@ namespace Proyecto.InnovaStock
             btnConfirmar.Click += btnConfirmar_Click;
 
             grpProveedor.Visible = false;
-            lblEditar.Visible = false;
+            lblSub.Visible = false;
 
             // ESTADOS VALIDOS PARA LA API
             cbEstadoPro.Items.Clear();
@@ -100,11 +100,13 @@ namespace Proyecto.InnovaStock
         {
             if (sender == cbxAñadir && cbxAñadir.Checked)
             {
+
+                lblSub.Text = "Llene los campos";
                 cbxEditar.Checked = false;
                 cbxEliminar.Checked = false;
 
                 grpProveedor.Visible = true;
-                lblEditar.Visible = false;
+                lblSub.Visible = false;
                 btnConfirmar.Text = "Guardar";
                 Limpiar();
             }
@@ -114,7 +116,7 @@ namespace Proyecto.InnovaStock
                 cbxEliminar.Checked = false;
 
                 grpProveedor.Visible = true;
-                lblEditar.Visible = true;
+                lblSub.Visible = true;
                 btnConfirmar.Text = "Actualizar";
             }
             else if (sender == cbxEliminar && cbxEliminar.Checked)
@@ -122,9 +124,24 @@ namespace Proyecto.InnovaStock
                 cbxAñadir.Checked = false;
                 cbxEditar.Checked = false;
 
-                grpProveedor.Visible = false;
-                lblEditar.Visible = false;
-                btnConfirmar.Text = "Eliminar (Doble click)";
+                grpProveedor.Visible = true;
+
+                btnConfirmar.Visible = false;
+
+                lblSub.Text = "Haga doble click para eliminar";
+
+                label4.Visible = false;
+                label1.Visible = false;
+                label5.Visible = false;
+                label6.Visible = false;
+
+                cbEstadoPro.Visible = false;
+
+                txtCorreoPro.Visible = false;
+                txtNombrePro.Visible = false;
+                txtTelefonoPro.Visible = false;
+
+
             }
         }
 

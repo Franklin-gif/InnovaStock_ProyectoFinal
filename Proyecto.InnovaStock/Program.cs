@@ -36,7 +36,7 @@ namespace Proyecto.InnovaStock
             // Si quieres abrir frmAgregarEmpleadoAdmin:
             // Application.Run(new frmAgregarEmpleadoAdmin());
             // Si quieres abrir frmSesionAdmin:
-            Application.Run(new frmInicio());
+            Application.Run(new frmProovedoresAdmin());
         }
     }
 }
