@@ -98,50 +98,84 @@ namespace Proyecto.InnovaStock
 
         private void Cbx_Checked(object sender, EventArgs e)
         {
-            if (sender == cbxAñadir && cbxAñadir.Checked)
             {
 
-                lblSub.Text = "Llene los campos";
-                cbxEditar.Checked = false;
-                cbxEliminar.Checked = false;
+                label4.Visible = true;
+                label1.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
 
-                grpProveedor.Visible = true;
-                lblSub.Visible = false;
-                btnConfirmar.Text = "Guardar";
-                Limpiar();
-            }
-            else if (sender == cbxEditar && cbxEditar.Checked)
-            {
-                cbxAñadir.Checked = false;
-                cbxEliminar.Checked = false;
+                txtCorreoPro.Visible = true;
+                txtNombrePro.Visible = true;
+                txtTelefonoPro.Visible = true;
+                cbEstadoPro.Visible = true;
 
-                grpProveedor.Visible = true;
-                lblSub.Visible = true;
-                btnConfirmar.Text = "Actualizar";
-            }
-            else if (sender == cbxEliminar && cbxEliminar.Checked)
-            {
-                cbxAñadir.Checked = false;
-                cbxEditar.Checked = false;
+                btnConfirmar.Visible = true;
 
-                grpProveedor.Visible = true;
+                if (sender == cbxAñadir && cbxAñadir.Checked)
+                {
+                    cbxEditar.Checked = false;
+                    cbxEliminar.Checked = false;
 
-                btnConfirmar.Visible = false;
+                    grpProveedor.Visible = true;
 
-                lblSub.Text = "Haga doble click para eliminar";
+                    lblSub.Visible = true;
+                    lblSub.Text = "Llene los campos";
 
-                label4.Visible = false;
-                label1.Visible = false;
-                label5.Visible = false;
-                label6.Visible = false;
+                    btnConfirmar.Text = "Guardar";
 
-                cbEstadoPro.Visible = false;
+                    Limpiar();
+                    return;
+                }
 
-                txtCorreoPro.Visible = false;
-                txtNombrePro.Visible = false;
-                txtTelefonoPro.Visible = false;
+                if (sender == cbxEditar && cbxEditar.Checked)
+                {
+                    cbxAñadir.Checked = false;
+                    cbxEliminar.Checked = false;
+
+                    grpProveedor.Visible = true;
+                    lblSub.Text = "Editando Proveedor (Haga doble click sobre el provedor para editarlo)";
 
 
+                    lblSub.Visible = true;
+
+
+                    btnConfirmar.Text = "Actualizar";
+                    return;
+                }
+
+                if (sender == cbxEliminar && cbxEliminar.Checked)
+                {
+                    cbxAñadir.Checked = false;
+                    cbxEditar.Checked = false;
+                    grpProveedor.Visible = true;
+
+                    btnConfirmar.Visible = false;
+
+                    lblSub.Visible = true;
+                    lblSub.Text = "Haga doble click para eliminar";
+
+                    label4.Visible = false;
+
+                    label1.Visible = false;
+
+                    label5.Visible = false;
+
+
+                    label6.Visible = false;
+
+
+                    txtCorreoPro.Visible = false;
+
+                    txtNombrePro.Visible = false;
+
+                    txtTelefonoPro.Visible = false;
+
+                    cbEstadoPro.Visible = false;
+
+
+                    return;
+                }
             }
         }
 
@@ -194,7 +228,7 @@ namespace Proyecto.InnovaStock
                     string err = await resp.Content.ReadAsStringAsync();
                     MessageBox.Show("Error al agregar proveedor: " + err);
                 }
-            }
+            }//b
             else if (cbxEditar.Checked)
             {
                 if (indiceEditar == -1)
@@ -290,6 +324,11 @@ namespace Proyecto.InnovaStock
         private void dgvProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // No usado
+        }
+
+        private void btnConfirmar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -82,7 +82,7 @@ namespace Proyecto.InnovaStock
                 else
                 {
                     string error = await response.Content.ReadAsStringAsync();
-                    LogEventos.Error(null, $"❌ Error al registrar empleado '{txtUsuario.Text}'. Estado HTTP: {response.StatusCode}. Respuesta: {error}");
+                    LogEventos.Error(null, $"Error al registrar empleado '{txtUsuario.Text}'. Estado HTTP: {response.StatusCode}. Respuesta: {error}");
 
                     MessageBox.Show("Error al registrar: " + error, "Error",
                          MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -90,9 +90,9 @@ namespace Proyecto.InnovaStock
             }
             catch (Exception ex)
             {
-                LogEventos.Fatal(ex, $"Error FATAL de Cliente/Red al intentar registrar empleado '{txtUsuario.Text}'.");
+                LogEventos.Fatal(ex, $"Error de Cliente/Red al intentar registrar empleado '{txtUsuario.Text}'.");
 
-                MessageBox.Show("Ocurrió un error inesperado de red o serialización.", "Error Crítico",
+                MessageBox.Show("Ocurrió un error inesperado de red.", "Error Crítico",
                      MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

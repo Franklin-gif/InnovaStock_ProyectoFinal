@@ -7,6 +7,7 @@ namespace Proyecto.InnovaStock
     {
         private static readonly ILogger logger = LogManager.GetCurrentClassLogger();
 
+        //DEBE CREAR UNA CARPETA LLAMADAS "logs" en c:
         public static void Info(string mensaje)
         {
             logger.Info(mensaje);

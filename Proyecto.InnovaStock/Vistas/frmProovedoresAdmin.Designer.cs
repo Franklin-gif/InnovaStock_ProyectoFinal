@@ -106,6 +106,7 @@
             btnConfirmar.TabIndex = 12;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = false;
+            btnConfirmar.Click += btnConfirmar_Click_1;
             // 
             // cbEstadoPro
             // 
